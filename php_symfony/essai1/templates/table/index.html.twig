@@ -9,30 +9,22 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Table de {{ n }}! ✅</h1>
+    <h1>Table de  {{ n }}! ✅</h1>
     
-    <table border=1>
-    <tr>
+    <table border=1 style="border-color:{{color}}" >
+    <tr style="color:{{color}}">
     <th>{{ n }}</th>
     <th>Multiplier par</th>
     <th>résulat</th>
+    
     </tr>
-    {% for i in 0.. t %}
+    {% for calculation in calculations %}
 
+<tr style="color:{{color}}"><td>{{n}}</td><td> {{calculation.indice}}</td><td>{{calculation.result}}</td></tr>
 
     
-    * {{ i }}
 {% endfor %}
-    <tr><td>{{n}}</td><td> 1</td><td>{{n*1}}</td></tr>
-    <tr><td>{{n}}</td><td> 2</td><td>{{n*2}}</td></tr>
-    <tr><td>{{n}}</td><td> 3</td><td>{{n*3}}</td></tr>
-    <tr><td>{{n}}</td> <td> 4</td><td>{{n*4}}</td></tr>
-    <tr><td>{{n}}</td><td> 5</td><td>{{n*5}}</td></tr>
-    <tr><td>{{n}}</td> <td> 6</td><td>{{n*6}}</td></tr>
-    <tr><td>{{n}}</td><td> 7</td><td>{{n*7}}</td></tr>
-    <tr><td>{{n}}</td><td> 8</td><td>{{n*8}}</td></tr>
-    <tr> <td>{{n}}</td><td> 9</td><td>{{n*9}}</td></tr>
-    <tr> <td>{{n}}</td><td> 10</td><td>{{n*10}}</td></tr>
+    
     </table>
 
 </div>
